@@ -23,6 +23,22 @@ Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
 in chapters 12--14"). Three dots ... will be converted to an ellipsis.
 Unicode is supported. O
 
+```c#
+  private static async Task<Article> PathToArticle(string filePath)
+        {
+            var uri = GetFullPath(filePath).ToUri();
+            var article = new Article
+            {
+                Author = uri.GetAuthorPart(),
+                FolderName = uri.GetFolderPart(),
+                MarkdownContent = await ReadTextFile(uri),
+                PublishDateTime = new DateTimeOffset(2100, 1, 1, 1, 1, 1, 1, TimeSpan.Zero),
+                Title = "Waiting Metadata",
+                IsActive = false
+            };
+            return article;
+        }
+```
 
 
 An h2 header
