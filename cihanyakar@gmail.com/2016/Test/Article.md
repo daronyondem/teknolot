@@ -23,7 +23,7 @@ Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
 in chapters 12--14"). Three dots ... will be converted to an ellipsis.
 Unicode is supported. O
 
-```c#
+```csharp
   private static async Task<Article> PathToArticle(string filePath)
         {
             var uri = GetFullPath(filePath).ToUri();
