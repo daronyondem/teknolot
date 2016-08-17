@@ -20,4 +20,4 @@ asd 2 2 2 2 ş ş
         }
 ```
 asd
-Hoþkalýn
+Hoşçakalın
